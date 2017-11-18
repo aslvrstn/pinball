@@ -12,5 +12,7 @@ for i, row in df.iterrows():
 df['effective_bonus'] = df['bonus'] * ~df['tilt']
 df['effective_bonus_x'] = df['bonus_x'] * ~df['tilt']
 
+del df['score_at_end']
+
 
 df.to_csv('derived_pinball.csv', index=False)

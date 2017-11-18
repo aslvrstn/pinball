@@ -1,8 +1,8 @@
 import edpanalyst
 import pandas as pd
 
-ses = edpanalyst.Session()
-pm = ses.popmod('pm-psebx3z6beiciqgj')
+ses = edpanalyst.Session('aslvrstn')
+pm = ses.popmod('pm-qtytgktksflw4mat')
 
 game = pm.simulate(given=pd.DataFrame({'ball': [str(b) for b in range(1, 6)]}), n=1)
 num_extra_balls = game['extra_balls'].astype(int).sum()
